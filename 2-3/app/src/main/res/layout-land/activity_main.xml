@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="140dp">
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:textSize="24dp"
+                />
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:textSize="24dp"
+                />
+        </TableLayout>
+    <TableLayout
+        android:layout_height="fill_parent"
+        android:layout_width="fill_parent">
+
+    <TableRow android:gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/button01"
+            android:onClick="Click3"
+            android:text="±" />
+            <Button android:id="@+id/button02"  android:text="0"/>
+
+        <Button
+            android:id="@+id/button03"
+            android:onClick="Click2"
+            android:text="." />
+
+        <Button
+            android:id="@+id/button04"
+            android:onClick="Click"
+            android:text="*" />
+
+        <Button
+            android:id="@+id/button05"
+            android:onClick="Click3"
+            android:text="sin" />
+        </TableRow>
+        <TableRow android:gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/button06"
+                android:onClick="Click2"
+                android:text="1" />
+
+            <Button
+                android:id="@+id/button07"
+                android:onClick="Click2"
+                android:text="2" />
+
+            <Button
+                android:id="@+id/button08"
+                android:onClick="Click2"
+                android:text="3" />
+
+            <Button
+                android:id="@+id/button09"
+                android:onClick="Click"
+                android:text="+" />
+
+            <Button
+                android:id="@+id/button10"
+                android:onClick="Click3"
+                android:text="cos" />
+        </TableRow>
+        <TableRow android:gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/button11"
+                android:onClick="Click2"
+                android:text="4" />
+
+            <Button
+                android:id="@+id/button12"
+                android:onClick="Click2"
+                android:text="5" />
+
+            <Button
+                android:id="@+id/button13"
+                android:onClick="Click2"
+                android:text="6" />
+
+            <Button
+                android:id="@+id/button14"
+                android:onClick="Click"
+                android:text="-" />
+
+            <Button
+                android:id="@+id/button15"
+                android:onClick="Click3"
+                android:text="√" />
+        </TableRow>
+        <TableRow android:gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/button16"
+                android:onClick="Click2"
+                android:text="7" />
+
+            <Button
+                android:id="@+id/button17"
+                android:onClick="Click2"
+                android:text="8" />
+
+            <Button
+                android:id="@+id/button18"
+                android:onClick="Click2"
+                android:text="9" />
+
+            <Button
+                android:id="@+id/button19"
+                android:onClick="Click"
+                android:text="/" />
+
+            <Button
+                android:id="@+id/button20"
+                android:onClick="Click"
+                android:text="=" />
+        </TableRow>
+    </TableLayout>
+</LinearLayout>
