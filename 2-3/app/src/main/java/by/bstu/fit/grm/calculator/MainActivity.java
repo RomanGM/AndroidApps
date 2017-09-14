@@ -81,14 +81,15 @@ public class MainActivity extends AppCompatActivity{
 
     public void Click2(View v){
         currentClick = ((Button) findViewById(v.getId())).getText().toString();
+
         if(!isX)
         {
-            if(x.equals("") && currentClick.equals(".")) {  currentClick += "0";    }
+            if(x.equals("") && currentClick.equals(".")) {  currentClick = "0" + currentClick;    }
             x += currentClick;
         }
-        else
+        else if(!code.equals(""))
         {
-            if(y.equals("") && currentClick.equals(".")) {  currentClick +="0";     }
+            if(y.equals("") && currentClick.equals(".")) {   currentClick = "0" + currentClick;     }
             y += currentClick;
         }
         display.append(currentClick);
@@ -97,7 +98,7 @@ public class MainActivity extends AppCompatActivity{
     public void Click3(View v)
     {
         currentClick = ((Button) findViewById(v.getId())).getText().toString();
-        if(!isX && !x.equals(""))
+        if(!x.equals("") && y.equals(""))
         {
             x=calc.GetFunc(currentClick,Float.parseFloat(x)).toString();
             result.setText(currentClick + display.getText() + "=" + x);
