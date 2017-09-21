@@ -7,7 +7,7 @@ import java.util.function.UnaryOperator;
 import java.util.logging.Logger;
 
 
-public class Calculator /*implements Operations*/ {
+public class Calculator implements Operations {
 
     static final Logger LOG = Logger.getLogger(Calculator.class.getName());
     Map<String, BinaryOperator<Float>> binary = new HashMap();

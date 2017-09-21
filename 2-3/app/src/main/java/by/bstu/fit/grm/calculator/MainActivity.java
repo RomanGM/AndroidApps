@@ -77,6 +77,7 @@ public class MainActivity extends AppCompatActivity{
                 isX=true;
             }
         }
+        Log.e("binary",x + " " + y);
     }
 
     public void Click2(View v){
@@ -93,6 +94,7 @@ public class MainActivity extends AppCompatActivity{
             y += currentClick;
         }
         display.append(currentClick);
+        Log.e("input",x + " " + y);
     }
 
     public void Click3(View v)
@@ -105,5 +107,6 @@ public class MainActivity extends AppCompatActivity{
             display.setText(x);
             isX=true;
         }
+        Log.e("unary",x + " " + y);
     }
 }

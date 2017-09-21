@@ -1,20 +1,19 @@
 package by.bstu.fit.grm.calculator;
 
+import java.util.function.BinaryOperator;
+import java.util.function.Supplier;
+import java.util.function.UnaryOperator;
+
 /**
  * Created by Roman on 07.09.2017.
  */
 
 public interface Operations {
-    float sum(float x, float y);
-    float residual(float x, float y);
-    float mult(float x, float y);
-    float division(float x, float y);
-    float reverseSign(float x);
-    float cos(float x);
-    float sin(float x);
-    float sqr(float x);
-    float modulus(float x);
-    float addDot(float x);
-    float addPi(float x);
-    float result(float x, float y);
+     void AddFunc(String code, BinaryOperator<Float> op);
+     void AddFunc(String code, UnaryOperator<Float> op) ;
+     void AddFunc(String code, Supplier<String> op);
+
+     Float GetFunc(String code, Float x) ;
+     Float GetFunc(String code, Float x,Float y);
+     String GetFunc(String code);
 }
