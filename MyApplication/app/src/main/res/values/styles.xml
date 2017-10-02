@@ -1,0 +1,15 @@
+<resources>
+    <color name="background">#FFFFFF </color>
+    <color name="red">#930303</color>
+    <color name="black">#000000</color>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/background</item>
+        <item name="colorPrimaryDark">@color/red</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/background</item>
+        <item name="android:textColorTertiary">@color/black</item>
+    </style>
+
+</resources>

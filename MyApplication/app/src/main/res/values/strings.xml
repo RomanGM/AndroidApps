@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">5-6</string>
+    <string-array name="Colors">
+        <item>Red</item>
+        <item>Black</item>
+        <item>Blue</item>
+        <item>White</item>
+    </string-array>
+</resources>

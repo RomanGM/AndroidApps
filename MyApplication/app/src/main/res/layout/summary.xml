@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="by.bstu.fit.grm.a5_6.Activities.MainActivity">
+
+   <FrameLayout
+       android:layout_width="fill_parent"
+       android:layout_height="fill_parent"
+       tools:layout_editor_absoluteY="0dp"
+       tools:layout_editor_absoluteX="0dp">
+       <ImageButton
+           android:layout_width="80dp"
+           android:layout_height="80dp"
+           android:layout_gravity="left|bottom"
+           android:onClick="Prev"
+           android:src="@drawable/ios2"
+           android:scaleType="fitXY"
+           />
+
+       <ImageButton
+           android:layout_width="80dp"
+           android:layout_height="80dp"
+           android:layout_gravity="right|bottom"
+           android:onClick="Next"
+           android:src="@drawable/ios"
+           android:scaleType="fitXY"
+           />
+
+        <TextView
+           android:id="@+id/textView"
+           android:layout_width="200dp"
+           android:gravity="center"
+           android:layout_height="40dp"
+           android:background="@color/red"
+           android:textColor="@color/background"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="50dp"
+           android:text="Color: " />
+       <TextView
+           android:id="@+id/textView2"
+           android:layout_width="200dp"
+           android:gravity="center"
+           android:layout_height="40dp"
+           android:background="@color/red"
+           android:textColor="@color/background"
+           android:layout_gravity="center_horizontal"
+           android:layout_marginTop="100dp"
+           android:text="Count: " />
+       <TextView
+           android:id="@+id/textView3"
+           android:layout_width="200dp"
+           android:gravity="center"
+           android:layout_height="40dp"
+           android:background="@color/red"
+           android:textColor="@color/background"
+           android:layout_gravity="center_horizontal"
+           android:layout_marginTop="150dp"
+           android:text="Email: " />
+       <TextView
+           android:id="@+id/textView4"
+           android:layout_width="200dp"
+           android:gravity="center"
+           android:layout_height="40dp"
+           android:background="@color/red"
+           android:textColor="@color/background"
+           android:layout_gravity="center_horizontal"
+           android:layout_marginTop="200dp"
+           android:text="Phone: " />
+   </FrameLayout>
+</android.support.constraint.ConstraintLayout>

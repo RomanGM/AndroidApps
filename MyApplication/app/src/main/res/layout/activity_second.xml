@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="by.bstu.fit.grm.a5_6.Activities.MainActivity">
+
+   <FrameLayout
+       android:layout_width="fill_parent"
+       android:layout_height="fill_parent">
+       <ImageButton
+           android:layout_width="80dp"
+           android:layout_height="80dp"
+           android:layout_gravity="left|bottom"
+           android:src="@drawable/ios2"
+           android:scaleType="fitXY"
+           android:onClick="Prev"
+           />
+       <ImageButton
+           android:layout_width="80dp"
+           android:layout_height="80dp"
+           android:layout_gravity="right|bottom"
+           android:src="@drawable/ios"
+           android:scaleType="fitXY"
+           android:onClick="Next"
+           />
+
+       <TextView
+           android:id="@+id/textView"
+           android:layout_width="200dp"
+           android:gravity="center"
+           android:layout_height="40dp"
+           android:layout_gravity="center_vertical|center_horizontal"
+           android:layout_marginBottom="60dp"
+           android:background="@color/red"
+           android:textColor="@color/background"
+           android:text="Count:" />
+       <SeekBar
+           android:id="@+id/bar"
+           android:layout_width="200dp"
+           android:layout_height="50dp"
+           android:layout_gravity="center_vertical|center_horizontal"
+           android:layout_marginBottom="10dp"
+           android:max="100"
+           android:min="1"
+           android:progress="50"/>
+   </FrameLayout>
+</android.support.constraint.ConstraintLayout>
