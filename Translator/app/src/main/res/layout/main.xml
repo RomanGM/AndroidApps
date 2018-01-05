@@ -5,91 +5,118 @@
     android:orientation="vertical"
     android:paddingLeft="20dp"
     android:paddingRight="20dp"
-    android:paddingTop="10dp"
     android:background="@color/Gray">
-    <LinearLayout
-        android:layout_marginTop="30dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:background="@color/White">
-    <EditText
-        android:id="@+id/text"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:hint="Введите текст..."
-        android:inputType="textMultiLine"
-        />
+
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp">
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:textAllCaps="false"
-            android:scaleType="fitCenter"
-            android:src="@drawable/speak"
-            android:background="@color/Gray"
-            android:adjustViewBounds="true"
-            android:layout_gravity="left|bottom"
-            android:onClick="InputSpeak"/>
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:scaleType="fitCenter"
-            android:background="@color/White"
-            android:src="@drawable/listen"
-            android:adjustViewBounds="true"
-            android:layout_gravity="center|bottom"
-            android:onClick="Listen"/>
+        android:layout_height="wrap_content"
+        android:background="@color/White"
+        android:layout_marginTop="10dp">
         <Spinner
+            android:id="@+id/spinner"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:id="@+id/spinner"></Spinner>
+            android:layout_gravity="left"
+            android:layout_height="match_parent"></Spinner>
         <Spinner
+            android:id="@+id/spinner2"
             android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_height="match_parent"></Spinner>
+        <Button
+            android:layout_width="115dp"
             android:layout_height="match_parent"
-            android:id="@+id/spinner2"></Spinner>
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:textAllCaps="false"
-            android:background="@color/Gray"
-            android:scaleType="fitCenter"
-            android:src="@drawable/translate"
-            android:adjustViewBounds="true"
-            android:layout_gravity="right|bottom"
-            android:onClick="Translate"/>
+            android:layout_gravity="right"
+            android:text="History"
+            android:onClick="showHistory"/>
     </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/White"
+        android:orientation="vertical">
+        <EditText
+            android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Введите текст..."
+            android:lines="8"
+            android:minLines="8"
+            android:maxLines="10"
+            android:scrollbars="vertical"
+            android:inputType="textMultiLine" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|bottom"
+                android:adjustViewBounds="true"
+                android:background="@color/Gray"
+                android:onClick="inputSpeak"
+                android:scaleType="fitCenter"
+                android:src="@drawable/speak"
+                android:textAllCaps="false"
+                android:textSize="16sp" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|bottom"
+                android:adjustViewBounds="true"
+                android:background="@color/White"
+                android:onClick="listen"
+                android:scaleType="fitCenter"
+                android:src="@drawable/listen" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|bottom"
+                android:adjustViewBounds="true"
+                android:background="@color/Gray"
+                android:onClick="translate"
+                android:scaleType="fitCenter"
+                android:src="@drawable/translate"
+                android:textAllCaps="false"
+                android:textSize="16sp" />
+        </FrameLayout>
     </LinearLayout>
+
     <LinearLayout
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/White">
-    <EditText
-        android:id="@+id/text2"
-        android:layout_width="match_parent"
-        android:layout_height="180dp"
-        android:hint="Здесь будет отображаться перевод..."
-        android:inputType="textMultiLine" />
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp">
-        <ImageButton
-            android:layout_width="wrap_content"
+        <EditText
+            android:id="@+id/text2"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:textAllCaps="false"
-            android:scaleType="fitCenter"
-            android:background="@color/Gray"
-            android:src="@drawable/speak"
-            android:adjustViewBounds="true"
-            android:layout_gravity="center|bottom"
-            android:onClick="OutputSpeak"/>
-    </FrameLayout>
+            android:hint="Здесь будет отображаться перевод..."
+            android:lines="8"
+            android:minLines="8"
+            android:maxLines="10"
+            android:scrollbars="vertical"
+            android:inputType="textMultiLine"  />
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textAllCaps="false"
+                android:scaleType="fitCenter"
+                android:background="@color/Gray"
+                android:src="@drawable/speak"
+                android:adjustViewBounds="true"
+                android:layout_gravity="center|bottom"
+                android:onClick="outputSpeak"/>
+        </FrameLayout>
     </LinearLayout>
 </LinearLayout>

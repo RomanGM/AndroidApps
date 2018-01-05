@@ -2,29 +2,33 @@ package by.bstu.fit.grm.translator.Speak;
 
 import android.content.Context;
 import android.speech.tts.TextToSpeech;
-
 import java.util.Locale;
 
-/**
- * Created by Roman on 03.01.2018.
- */
+import by.bstu.fit.grm.translator.R;
 
 public class Speaker implements TextToSpeech.OnInitListener {
 
     private TextToSpeech textToSpeech;
     private Locale speakLocale;
+    Context context;
 
     public Speaker(Context context){
         this.textToSpeech = new TextToSpeech(context, this);
         this.speakLocale = new Locale("ru");
+        this.context = context;
     }
 
-    public void SetInputLanguage(Locale mSpeakLocale){
+    public String[] GetSupportLanguage(){
+        return context.getResources().getStringArray(R.array.supportLanguages);
+    }
+
+
+    public void SetLanguage(Locale mSpeakLocale){
         this.speakLocale = mSpeakLocale;
         textToSpeech.setLanguage(mSpeakLocale);
     }
 
-    public Locale GetInputLanguage(){
+    public Locale GetLanguage(){
         return speakLocale;
     }
 
@@ -41,6 +45,5 @@ public class Speaker implements TextToSpeech.OnInitListener {
 
     @Override
     public void onInit(int status) {
-
     }
 }

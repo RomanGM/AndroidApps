@@ -1,27 +1,12 @@
 package by.bstu.fit.grm.translator.Translate;
 
-import android.content.Context;
-import android.net.Uri;
 import android.os.AsyncTask;
-import android.util.Log;
-import android.view.ContextMenu;
-import android.widget.Toast;
-
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.util.EntityUtils;
-
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URI;
-import java.net.URISyntaxException;
-import java.net.URL;
 
 import by.bstu.fit.grm.translator.MainActivity;
 
@@ -48,19 +33,19 @@ public class Translator extends AsyncTask<String, Void, String> {
         String textToBeTranslated = params[0];
         String languagePair = params[1];
         if(!textToBeTranslated.equals("") && !textToBeTranslated.equals(null)) {
-            request = CreateRequestString(textToBeTranslated,languagePair);
-            result = SendRequestString(request);
+            request = createRequestString(textToBeTranslated,languagePair);
+            result = sendRequestString(request);
         }
-        return ParseTranslateResult(result);
+        return parseTranslateResult(result);
     }
 
-    private String CreateRequestString(String textToBeTranslated, String languagePair){
+    private String createRequestString(String textToBeTranslated, String languagePair){
         String url = YANDEX_URL + "&text=" + textToBeTranslated
                 + "&lang=" + languagePair;
         return url.replaceAll(REGULAR_EXPRESSION_FOR_SPACES, SPACE_KEY_FOR_WEB);
     }
 
-    private String SendRequestString(String requestString){
+    private String sendRequestString(String requestString){
         try {
             HttpGet httpget = new HttpGet(requestString);
             HttpResponse serverResponse = httpclient.execute(httpget);
@@ -74,10 +59,15 @@ public class Translator extends AsyncTask<String, Void, String> {
         return null;
     }
 
-    private String ParseTranslateResult(String result){
+    private String parseTranslateResult(String result){
         if(!result.equals(null)){
-            result = result.substring(result.indexOf('[') + 1, result.indexOf("]"));
-            result = result.substring(result.indexOf("\"") + 1, result.indexOf("\""));
+            try {
+                result = result.substring(result.indexOf('[') + 1, result.indexOf("]"));
+                result = result.substring(result.indexOf("\"") + 1, result.indexOf("\""));
+            }
+            catch (Exception ex){
+                result = "";
+            }
         }
         return result;
     }

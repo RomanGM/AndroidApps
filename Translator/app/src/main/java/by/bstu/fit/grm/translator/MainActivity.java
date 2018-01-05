@@ -1,34 +1,39 @@
 package by.bstu.fit.grm.translator;
 
-import java.util.ArrayList;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.speech.RecognizerIntent;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
+
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
 
 import by.bstu.fit.grm.translator.Listen.Listener;
 import by.bstu.fit.grm.translator.Speak.Speaker;
 import by.bstu.fit.grm.translator.Translate.Translator;
+import by.bstu.fit.grm.translator.Write.Writer;
 
 public class MainActivity extends Activity {
 
     private Speaker speaker;
-    private Translator translator;
     private EditText inputField;
     private EditText outputField;
     private Spinner inputLanguage;
+    private Translator translator;
     private Spinner outputLanguage;
     private Listener listener = new Listener();
+    private Writer writer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         speaker = new Speaker(this);
+        writer = new Writer(this);
         inputField = findViewById(R.id.text);
         outputField = findViewById(R.id.text2);
         inputLanguage = findViewById(R.id.spinner);
@@ -37,38 +42,49 @@ public class MainActivity extends Activity {
             @Override
             public void processFinish(String output) {
                 outputField.setText(output);
+                writer.writeFile(" output " + output);
             }
         });
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, speaker.GetSupportLanguage());
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        inputLanguage.setAdapter(adapter);
+        outputLanguage.setAdapter(adapter);
     }
 
-    public void InputSpeak(View v) {
+    public void inputSpeak(View v) {
+        speaker.SetLanguage(new Locale(inputLanguage.getSelectedItem().toString()));
         speaker.SpeakText(inputField.getText().toString());
     }
 
-    public void OutputSpeak(View v) {
+    public void outputSpeak(View v) {
+        speaker.SetLanguage(new Locale(outputLanguage.getSelectedItem().toString()));
         speaker.SpeakText(outputField.getText().toString());
     }
 
-    public void Translate(View v) {
-        String textToBeTranslated = inputField.getText().toString();
-        String languagePair = CreatePair();
-        translator.execute(textToBeTranslated,languagePair);
+    public void showHistory(View v){
+        startActivity(new Intent(this,HistoryActivity.class));
     }
 
-    public String CreatePair()
-    {
+    public void translate(View v) {
+        String textToBeTranslated = inputField.getText().toString();
+        String languagePair = createPair();
+        translator.execute(textToBeTranslated,languagePair);
+        writer.writeFile(" input " + textToBeTranslated);
+    }
+
+    public String createPair() {
         String firstPart = inputLanguage.getSelectedItem().toString();
         String secondPart = outputLanguage.getSelectedItem().toString();
         return firstPart + "-" + secondPart;
     }
 
-    public void Listen(View v){
-        startActivityForResult(listener.CreateVoiceIntent(), 999);
+    public void listen(View v){
+        startActivityForResult(listener.createVoiceIntent(), 999);
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent intent){
-        String voiceInput = listener.GetVoiceInput(requestCode,resultCode,intent);
+        String voiceInput = listener.getVoiceInput(requestCode,resultCode,intent);
         inputField.append(voiceInput);
         super.onActivityResult(requestCode, resultCode, intent);
     }

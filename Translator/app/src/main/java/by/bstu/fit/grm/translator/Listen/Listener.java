@@ -7,12 +7,9 @@ import java.util.ArrayList;
 
 import static android.app.Activity.RESULT_OK;
 
-/**
- * Created by Roman on 03.01.2018.
- */
 
 public class Listener {
-    public Intent CreateVoiceIntent() {
+    public Intent createVoiceIntent() {
         Intent listenIntent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
         listenIntent.putExtra(RecognizerIntent.EXTRA_CALLING_PACKAGE,
                 getClass().getPackage().getName());
@@ -23,7 +20,7 @@ public class Listener {
         return listenIntent;
     }
 
-    public String GetVoiceInput(int requestCode, int resultCode, Intent intent) {
+    public String getVoiceInput(int requestCode, int resultCode, Intent intent) {
         if(requestCode== 999 && resultCode == RESULT_OK)
         {
             ArrayList<String> suggestedWords =
