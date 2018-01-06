@@ -38,13 +38,6 @@ public class MainActivity extends Activity {
         outputField = findViewById(R.id.text2);
         inputLanguage = findViewById(R.id.spinner);
         outputLanguage = findViewById(R.id.spinner2);
-        translator = new Translator(new AsyncResponse(){
-            @Override
-            public void processFinish(String output) {
-                outputField.setText(output);
-                writer.writeFile(" output " + output);
-            }
-        });
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, speaker.GetSupportLanguage());
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         inputLanguage.setAdapter(adapter);
@@ -68,6 +61,13 @@ public class MainActivity extends Activity {
     public void translate(View v) {
         String textToBeTranslated = inputField.getText().toString();
         String languagePair = createPair();
+        translator = new Translator(new AsyncResponse(){
+            @Override
+            public void processFinish(String output) {
+                outputField.setText(output);
+                writer.writeFile(" output " + output);
+            }
+        });
         translator.execute(textToBeTranslated,languagePair);
         writer.writeFile(" input " + textToBeTranslated);
     }

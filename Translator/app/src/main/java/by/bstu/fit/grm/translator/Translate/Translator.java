@@ -1,6 +1,9 @@
 package by.bstu.fit.grm.translator.Translate;
 
 import android.os.AsyncTask;
+import android.util.Log;
+import android.widget.Toast;
+
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
@@ -33,9 +36,12 @@ public class Translator extends AsyncTask<String, Void, String> {
         String textToBeTranslated = params[0];
         String languagePair = params[1];
         if(!textToBeTranslated.equals("") && !textToBeTranslated.equals(null)) {
+            Log.e("123123","PreCreate");
             request = createRequestString(textToBeTranslated,languagePair);
+            Log.e("123123","PreSend");
             result = sendRequestString(request);
         }
+        Log.e("123123","PreParse");
         return parseTranslateResult(result);
     }
 
@@ -63,7 +69,7 @@ public class Translator extends AsyncTask<String, Void, String> {
         if(!result.equals(null)){
             try {
                 result = result.substring(result.indexOf('[') + 1, result.indexOf("]"));
-                result = result.substring(result.indexOf("\"") + 1, result.indexOf("\""));
+                result = result.substring(1, result.length()-1);
             }
             catch (Exception ex){
                 result = "";
