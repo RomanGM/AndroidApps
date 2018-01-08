@@ -1,0 +1,65 @@
+﻿@model Manual
+<div class="scanlines"></div>
+<div class="wrapper">
+    <div class="box">
+        <div>
+            <h1 class="title">@Model.Name</h1>
+            @Model.Date.ToShortDateString() 
+            <br />
+            <p>@Model.Synopsis</p>
+            <div class="outer none">
+                <center>
+                    <span class="inset">
+                        <img src=@Model.Picture.Path alt="About" title="About" />
+                    </span>
+                </center>
+            </div>
+            @Html.Raw( Model.Content )
+        </div>
+        <div class="clear"></div>
+        <hr />
+        <div id="comment-form" class="comment-form">
+
+            <div id="respond">
+                <form action="~/Wall/AddComment" method="post" id="commentform">
+                    <p class="comment-form-comment">
+                        <label for="comment">Comment</label>
+                        <textarea id="comment" name="content" cols="45" rows="8" aria-required="true"></textarea>
+                    </p>
+                    <input type="hidden" id="id" value="@Model.ManualId" />
+                    <p class="form-submit">
+                        <input name="submit" type="submit" id="submit" value="Post Comment" />
+                    </p>
+                </form>
+            </div>
+
+        </div>
+        @if (Model.Comments != null)
+        {<div id="comment-wrapper" class="box">
+            <div id="comments">
+                <h3 id="comments-title">@Model.Comments.Count Responses to "Morning Glory"</h3>
+                <ol id="singlecomments" class="commentlist">
+                    @foreach (var comment in Model.Comments)
+                    {
+                        <li class="comment">
+                            <div class="comment">
+                                <div class="comment-author vcard user frame">
+                                    <img alt="" src='http://0.gravatar.com/avatar/2876eddf6bce8c3f8527990c2d115c99?s=70&amp;d=retro&amp;r=G' class='avatar avatar-70 photo' height='70' width='70' />
+                                </div>
+                                <div class="message">
+                                    <div class="info">
+                                   
+                                    </div>
+                                    <div class="comment-body ">
+                                        <p>@comment.Content</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    }
+                </ol>
+            </div>
+        </div>
+        }
+    </div>
+</div>

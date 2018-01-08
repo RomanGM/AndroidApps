@@ -1,0 +1,30 @@
+﻿@model IEnumerable<Manual>
+
+<div class="wrapper">
+    <div class="blog-wrap">
+        <div class="blog-grid">
+            @foreach (var manual in Model)
+            {
+                <div class="post format-image box">
+                    <div class="frame">
+                        <a href="~/Wall/ShowPost/@manual.ManualId">
+                            <img src=@manual.Picture.Path alt="" />
+                        </a>
+                    </div>
+                    <h2 class="title"><a href="~/Wall/ShowPost/@manual.ManualId">@manual.Name</a></h2>
+                    <p><a href="~/Wall/ShowPost/@manual.ManualId">@manual.Synopsis</a></p>
+                    <div class="details">
+                        <span class="icon-image"><a href="~/Wall/ShowPost/@manual.ManualId">@manual.Date.ToShortDateString()</a></span>
+                        <span class="likes"><a href="#" class="likeThis">0</a></span>
+                        <span class="comments"><a href="#">0</a></span>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+    <div id="navigation">
+        <div class="nav-previous"><a href="#"><span class="meta-nav-prev">&larr; Previous</span></a></div>
+        <div class="nav-next"><a href="#"><span class="meta-nav-next">Next &rarr;</span></a></div>
+    </div>
+</div>
+

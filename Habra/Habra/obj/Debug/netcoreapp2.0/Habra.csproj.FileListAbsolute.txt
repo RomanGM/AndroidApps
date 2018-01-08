@@ -1,0 +1,16 @@
+U:\Study\ITransition\Habra\Habra\bin\Debug\netcoreapp2.0\Habra.deps.json
+U:\Study\ITransition\Habra\Habra\bin\Debug\netcoreapp2.0\Habra.runtimeconfig.json
+U:\Study\ITransition\Habra\Habra\bin\Debug\netcoreapp2.0\Habra.runtimeconfig.dev.json
+U:\Study\ITransition\Habra\Habra\bin\Debug\netcoreapp2.0\Habra.dll
+U:\Study\ITransition\Habra\Habra\bin\Debug\netcoreapp2.0\Habra.pdb
+U:\Study\ITransition\Habra\Habra\obj\Debug\netcoreapp2.0\Habra.csprojResolveAssemblyReference.cache
+U:\Study\ITransition\Habra\Habra\obj\Debug\netcoreapp2.0\Habra.csproj.CoreCompileInputs.cache
+U:\Study\ITransition\Habra\Habra\obj\Debug\netcoreapp2.0\Habra.AssemblyInfoInputs.cache
+U:\Study\ITransition\Habra\Habra\obj\Debug\netcoreapp2.0\Habra.AssemblyInfo.cs
+U:\Study\ITransition\Habra\Habra\obj\Debug\netcoreapp2.0\Habra.dll
+U:\Study\ITransition\Habra\Habra\obj\Debug\netcoreapp2.0\Habra.pdb
+U:\Study\ITransition\Habra\Habra\bin\Debug\netcoreapp2.0\BusinessLayear.dll
+U:\Study\ITransition\Habra\Habra\bin\Debug\netcoreapp2.0\DataLayer.dll
+U:\Study\ITransition\Habra\Habra\bin\Debug\netcoreapp2.0\BusinessLayear.pdb
+U:\Study\ITransition\Habra\Habra\bin\Debug\netcoreapp2.0\DataLayer.pdb
+U:\Study\ITransition\Habra\Habra\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs

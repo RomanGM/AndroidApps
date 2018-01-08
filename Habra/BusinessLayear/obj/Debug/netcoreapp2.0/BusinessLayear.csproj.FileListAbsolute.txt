@@ -1,0 +1,15 @@
+U:\Study\ITransition\Habra\BusinessLayear\bin\Debug\netcoreapp2.0\BusinessLayear.deps.json
+U:\Study\ITransition\Habra\BusinessLayear\bin\Debug\netcoreapp2.0\BusinessLayear.dll
+U:\Study\ITransition\Habra\BusinessLayear\bin\Debug\netcoreapp2.0\BusinessLayear.pdb
+U:\Study\ITransition\Habra\BusinessLayear\bin\Debug\netcoreapp2.0\DataLayer.dll
+U:\Study\ITransition\Habra\BusinessLayear\bin\Debug\netcoreapp2.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+U:\Study\ITransition\Habra\BusinessLayear\bin\Debug\netcoreapp2.0\Microsoft.Extensions.Identity.Stores.dll
+U:\Study\ITransition\Habra\BusinessLayear\bin\Debug\netcoreapp2.0\DataLayer.pdb
+U:\Study\ITransition\Habra\BusinessLayear\bin\Debug\netcoreapp2.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.xml
+U:\Study\ITransition\Habra\BusinessLayear\bin\Debug\netcoreapp2.0\Microsoft.Extensions.Identity.Stores.xml
+U:\Study\ITransition\Habra\BusinessLayear\obj\Debug\netcoreapp2.0\BusinessLayear.csprojResolveAssemblyReference.cache
+U:\Study\ITransition\Habra\BusinessLayear\obj\Debug\netcoreapp2.0\BusinessLayear.csproj.CoreCompileInputs.cache
+U:\Study\ITransition\Habra\BusinessLayear\obj\Debug\netcoreapp2.0\BusinessLayear.AssemblyInfoInputs.cache
+U:\Study\ITransition\Habra\BusinessLayear\obj\Debug\netcoreapp2.0\BusinessLayear.AssemblyInfo.cs
+U:\Study\ITransition\Habra\BusinessLayear\obj\Debug\netcoreapp2.0\BusinessLayear.dll
+U:\Study\ITransition\Habra\BusinessLayear\obj\Debug\netcoreapp2.0\BusinessLayear.pdb

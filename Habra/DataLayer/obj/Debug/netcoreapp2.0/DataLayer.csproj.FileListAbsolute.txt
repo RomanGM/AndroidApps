@@ -1,0 +1,13 @@
+U:\Study\ITransition\Habra\DataLayer\bin\Debug\netcoreapp2.0\DataLayer.deps.json
+U:\Study\ITransition\Habra\DataLayer\bin\Debug\netcoreapp2.0\DataLayer.dll
+U:\Study\ITransition\Habra\DataLayer\bin\Debug\netcoreapp2.0\DataLayer.pdb
+U:\Study\ITransition\Habra\DataLayer\bin\Debug\netcoreapp2.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+U:\Study\ITransition\Habra\DataLayer\bin\Debug\netcoreapp2.0\Microsoft.Extensions.Identity.Stores.dll
+U:\Study\ITransition\Habra\DataLayer\bin\Debug\netcoreapp2.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.xml
+U:\Study\ITransition\Habra\DataLayer\bin\Debug\netcoreapp2.0\Microsoft.Extensions.Identity.Stores.xml
+U:\Study\ITransition\Habra\DataLayer\obj\Debug\netcoreapp2.0\DataLayer.csprojResolveAssemblyReference.cache
+U:\Study\ITransition\Habra\DataLayer\obj\Debug\netcoreapp2.0\DataLayer.csproj.CoreCompileInputs.cache
+U:\Study\ITransition\Habra\DataLayer\obj\Debug\netcoreapp2.0\DataLayer.AssemblyInfoInputs.cache
+U:\Study\ITransition\Habra\DataLayer\obj\Debug\netcoreapp2.0\DataLayer.AssemblyInfo.cs
+U:\Study\ITransition\Habra\DataLayer\obj\Debug\netcoreapp2.0\DataLayer.dll
+U:\Study\ITransition\Habra\DataLayer\obj\Debug\netcoreapp2.0\DataLayer.pdb
